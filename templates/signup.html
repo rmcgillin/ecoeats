@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+<body>
+    <style> 
+        /* The device with borders */
+        .smartphone {
+          position: relative;
+          width: 360px;
+          height: 640px;
+          margin: auto;
+          border: 16px rgb(0, 0, 0) solid;
+          border-top-width: 60px;
+          border-bottom-width: 60px;
+          border-radius: 36px;
+        }
+        
+        /* The horizontal line on the top of the device */
+        .smartphone:before {
+          content: '';
+          display: block;
+          width: 60px;
+          height: 5px;
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: #333;
+          border-radius: 10px;
+        }
+        
+        /*The circle on the bottom of the device */
+        .smartphone:after {
+          content: '';
+          display: block;
+          width: 35px;
+          height: 35px;
+          position: absolute;
+          left: 50%;
+          bottom: -65px;
+          transform: translate(-50%, -50%);
+          background: #333;
+          border-radius: 50%;
+        }
+        
+        /* The screen (or content) of the device */
+       /* .smartphone .content {
+          color: green
+          width: 35px;
+          height: 35px;
+        } */
+
+        .content{
+    position: relative;
+    width: 100%;
+
+}
+
+.content img{
+    width: 360px;
+    height: 350px;
+}
+
+.forename {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif  
+}
+.surname {
+    position: absolute;
+    left: 20px;
+    bottom: -15px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    
+}
+.email {
+    position: absolute;
+    left: 20px;
+    bottom: -40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.password {
+    position: absolute;
+    width: 300px;
+    left: 20px;
+    bottom: -65px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.phonenumber {
+    position: absolute;
+    width: 300px;
+    left: 20px;
+    bottom: -25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    
+}
+
+.signup {
+    position:absolute;
+    font-size: 26px;
+    bottom: 100px;
+    left: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.signupbtn {
+    position: absolute;
+    bottom: -100px;
+    border: none;
+    left: 45px;
+    font-size: 8px;
+}
+.or {
+    position: absolute;
+    bottom: -160px;
+    left: 165px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.emailbtn {
+    position: absolute;
+    bottom: -185px;
+    border: none;
+    left: 25px;
+    font-size: 8px;
+}
+.googlebtn {
+    position: absolute;
+    bottom: -210px;
+    border: none;
+    left: 25px;
+    font-size: 8px;
+}
+.applebtn {
+    position: absolute;
+    bottom: -235px;
+    border: none;
+    left: 25px;
+    font-size: 8px;
+}
+
+.facebookbtn {
+    position: absolute;
+    bottom: -260px;
+    width: 200px;
+    border: none;
+    left: 25px;
+    font-size: 8px;
+}
+        </style>
+        
+        <body>
+        <div class="smartphone">
+        <div class="content">
+        <img src="/Users/rebeccamcgillin/EcoEats/app/static/signup1.png" width=362px height=250px>
+
+
+        <form action="signup.html" method="POST">
+            <div class ="forename">
+            <div class = "inputforename">
+                <label for="forname">Forename:</label>
+                <input type="forename" id="forename" name="forename" required>
+            </div>
+            </div>
+            
+            <div class ="surname">
+                <div class = "inputsurname">
+                    <label for="surname">Surname:</label>
+                    <input type="surname" id="surname" name="surname" required>
+                </div>
+                </div>
+
+                <div class ="email">
+                    <div class = "inputemail">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    </div>
+
+            
+            <div class = "password">
+            <div class = "inputpassword">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+              </div>
+
+              <div class ="phonenumber">
+                <div class = "inputphonenumber">
+                    <label for="phonenumber">Phone number:</label>
+                    <input type="phonenumber" id="phonenumber" name="phonenumber" required>
+                </div>
+                </div>
+
+      <div class = "signupbtn">
+          <button>Sign up</button>
+      </div>
+            </form>
+
+        <div class = "signup">Sign up below</div>
+
+<div class ="or">or</div>
+<div class = "emailbtn">
+    <button>Email</button>
+</div>
+<div class = "googlebtn">
+    <button>Google</button>
+</div>
+<div class = "applebtn">
+    <button>Apple</button>
+</div>
+<div class = "facebookbtn">
+    <button>Facebook</button>
+</div>
+        </div>
+
+</div>
+
+</body>
+</html>
+
+

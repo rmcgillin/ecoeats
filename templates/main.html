@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+<body>
+    <style> 
+        /* The device with borders */
+        .smartphone {
+          position: relative;
+          width: 360px;
+          height: 640px;
+          margin: auto;
+          border: 16px rgb(0, 0, 0) solid;
+          border-top-width: 60px;
+          border-bottom-width: 60px;
+          border-radius: 36px;
+        }
+        
+        /* The horizontal line on the top of the device */
+        .smartphone:before {
+          content: '';
+          display: block;
+          width: 60px;
+          height: 5px;
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: #333;
+          border-radius: 10px;
+        }
+        
+        /*The circle on the bottom of the device */
+        .smartphone:after {
+          content: '';
+          display: block;
+          width: 35px;
+          height: 35px;
+          position: absolute;
+          left: 50%;
+          bottom: -65px;
+          transform: translate(-50%, -50%);
+          background: #333;
+          border-radius: 50%;
+        }
+        
+        /* The screen (or content) of the device */
+       /* .smartphone .content {
+          color: green
+          width: 35px;
+          height: 35px;
+        } */
+
+    .content{
+    position: relative;
+    width: 100%;
+    max-width: width 400px;
+}
+
+.content img{
+    width: 362px;
+    height: 642px;
+}
+
+.loginbtn{
+  position: absolute;
+    background-color:white;
+    border-color:black;
+    top: 90%;
+    left: 50%;
+    width: 300px;
+    font-family: sans-serif;
+    transform: translate(-50%, -50%);
+}
+.signupbtn{
+    position: absolute;
+    background-color:white;
+    border-color:black;
+    top: 95%;
+    left: 50%;
+    width: 300px;
+    font-family: sans-serif;
+    transform: translate(-50%, -50%);
+}
+
+#img2 {
+  position:absolute;
+  width: 175px;
+  height: 160px;
+  left: 10px;
+  top: 50%;
+}
+
+.text {
+position:absolute;
+left: 10px;
+top:73%;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+
+        </style>
+        
+        <body>
+        <div class="smartphone">
+          <div class="content">
+        <img src={{ url_for('static', filename='images/background.png')}} width=362.2px height=635px >
+        <img src={{ url_for('static', filename='images/ecoeats.png' )}} width=10px height=10px id="img2">
+
+
+        <div class="loginbtn">
+          <button><a href="login.html">Login</a></button>
+        </div>
+
+        <div class="Logo">
+      </div>
+      
+      <div class="signupbtn">
+          <button><a href="signup.html">Sign up</a></button>
+        </div>
+      <div class="text">
+      
+        <p>Making shopping for food,</p>
+        <p>sustainable.</p>
+    
+    </div>          
+  </div>
+        </div>
+
+</body>
+</html>

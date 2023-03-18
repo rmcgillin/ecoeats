@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="static/css/fav.css">
+</head>
+
+<body>
+
+  <div class="smartphone">
+    <div class="content">
+      <img class="img" src="static/images/ecoeats.png" id="img2" />
+
+      <div class="favourites">
+        {% if data %}
+
+        <table>
+          <thead>
+            <tr>
+              <th>Favourites</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in data %}
+            <tr>
+              <td>{{ row[0] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <p>You haven't added any favourites yet.</p>
+        {% endif %}
+
+      </div>
+      <div class="add-favourites">
+        <h2>Add a Favourite</h2>
+        <form action="{{ url_for('add_favourites') }}" method="POST">
+          <select name="favourite_item">
+            {% for value in available_items %}
+            <option value="{{ value[0] }}">{{ value[1] }}</option>
+            {% endfor %}
+          </select>
+          <button type="submit">Add Favourite</button>
+        </form>
+      </div>
+
+      <div class="menu-bar">
+        <nav>
+          <ul>
+            <li><a href="search.html">search</a></li>
+            <li><a href="favourites">favourites</a></li>
+            <li><a href="scan.html">scan</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="profile.html">profile</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="line"></div>
+      <!-- 
+      <div class="addbtn">
+        <button href="/add_favourite">+</button>
+      </div> -->
+
+    </div>
+</body>
+
+</html>

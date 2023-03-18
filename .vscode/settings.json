@@ -1,0 +1,12 @@
+{
+    "python.pythonPath": ".test/bin/python",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "MySQL",
+            "database": "${workspaceFolder:EcoEats}/EcoEats Database.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
