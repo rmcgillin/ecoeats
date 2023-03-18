@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="static/css/smartphone.css">
+
+</head>
+
+<body>
+    <style>
+        /* The device with borders */
+        .smartphone {
+            position: relative;
+            width: 360px;
+            height: 640px;
+            margin: auto;
+            border: 16px rgb(0, 0, 0) solid;
+            border-top-width: 60px;
+            border-bottom-width: 60px;
+            border-radius: 36px;
+        }
+
+        /* The horizontal line on the top of the device */
+        .smartphone:before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 5px;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #333;
+            border-radius: 10px;
+        }
+
+        /*The circle on the bottom of the device */
+        .smartphone:after {
+            content: '';
+            display: block;
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            left: 50%;
+            bottom: -65px;
+            transform: translate(-50%, -50%);
+            background: #333;
+            border-radius: 50%;
+        }
+
+
+        .content {
+            position: relative;
+            width: 100%;
+            /*max-width: width 400px;*/
+        }
+
+        .email {
+            position: absolute;
+            left: 47px;
+            bottom: 290px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        .password {
+            position: absolute;
+            left: 20px;
+            bottom: 260px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        .loginbtn {
+            position: absolute;
+            left: 20px;
+            bottom: 200px;
+            border: none;
+        }
+
+        .text {
+            position: absolute;
+            font-size: 8px;
+            bottom: 30px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        .inputemail {
+            position: absolute;
+            width: 300px;
+        }
+
+        .inputpassword {
+            position: absolute;
+            width: 300px;
+        }
+
+        .logintext {
+            position: absolute;
+            font-size: 26px;
+            bottom: 300px;
+            left: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        .text2 {
+            position: absolute;
+            bottom: 90px;
+            width: 300px;
+            right: 0px;
+            font-size: 14px;
+            background-color: transparent;
+            border-color: transparent;
+        }
+    </style>
+
+    <div class="smartphone">
+        <div class="content">
+            <div class="img">
+                <img src="{{ url_for('static', filename='images/login1.png') }}" alt="Logo"
+                    style="width: 362px;height:280px;">
+            </div>
+        </div>
+
+
+        <form action="/login.html" method="POST">
+            <div class="email">
+                <div class="inputemail">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="password">
+                <div class="inputpassword">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+            </div>
+            <div class="loginbtn">
+                <button type="submit" href="menu.html">Log in</button>
+            </div>
+            <input type="hidden" name="next" value="{{ request.args.get('next', '') }}" />
+        </form>
+        <div class="text">
+            By continuting past this page, you agree to the Terms of Use and understand that information will be used as
+            described in our Privacy Policy.
+        </div>
+
+        <div class="logintext">
+            Log in below
+        </div>
+
+
+        <div class="text2">
+            <button><a href="signup.html">Don't have an account? <b>Signup</b></a></button>
+        </div>
+
+    </div>
+    </div>
+
+</body>
+
+</html>

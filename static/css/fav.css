@@ -1,0 +1,131 @@
+    /* The device with borders */
+    .smartphone {
+        position: relative;
+        width: 360px;
+        height: 640px;
+        margin: auto;
+        border: 16px rgb(0, 0, 0) solid;
+        border-top-width: 60px;
+        border-bottom-width: 60px;
+        border-radius: 36px;
+    }
+
+    /* The horizontal line on the top of the device */
+    .smartphone:before {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 5px;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #333;
+        border-radius: 10px;
+    }
+
+    /*The circle on the bottom of the device */
+    .smartphone:after {
+        content: "";
+        display: block;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 50%;
+        bottom: -65px;
+        transform: translate(-50%, -50%);
+        background: #333;
+        border-radius: 50%;
+    }
+
+    .content {
+        position: absolute;
+        width: 360px;
+        height: 640px;
+    }
+
+    .content img {
+        width: 362px;
+        height: 642px;
+    }
+
+    #img2 {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        left: 150px;
+        top: 3%;
+    }
+
+    .menu-bar {
+        position: absolute;
+        bottom: -2%;
+        left: 45%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        height: 100px;
+    }
+
+    .menu-bar li {
+        display: inline-block;
+        width: 55px;
+        height: 55px;
+        margin: 0 5px;
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+        font-size: 13px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+    }
+
+    .menu-bar li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+        text-align: center;
+    }
+
+
+    .line {
+        position: absolute;
+        bottom: 11%;
+        left: 0%;
+        width: 360px;
+        height: 2px;
+        background-color: black;
+    }
+
+    .favourites {
+        position: absolute;
+        font-size: 20px;
+        left: 30px;
+        top: 170px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .add-favourites {
+        position: absolute;
+        font-size: 20px;
+        left: 30px;
+        top: 65px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .addbtn {
+        background-color: green;
+        border-radius: 50%;
+        color: white;
+        padding: 25px 25px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 80px;
+        left: 0;
+
+    }
